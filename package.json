@@ -1,0 +1,14 @@
+{
+  "name": "srfa",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/Mganzzzzz/srfa.git",
+  "author": "hongyuue <hongyuue@163.com>",
+  "license": "MIT",
+  "dependencies": {
+    "nodemon": "^2.0.2"
+  },
+  "scripts": {
+    "test": "nodemon sort/insert-sort.js"
+  }
+}

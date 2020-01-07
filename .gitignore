@@ -85,3 +85,5 @@ fabric.properties
 .idea/srfa.iml
 .idea/vagrant.xml
 .idea/vcs.xml
+
+node_modules/

@@ -30,6 +30,10 @@ module.exports = {
             return a_item === a2[a_index]
         })
         return item_equal
+    },
+    random_between(start, end) {
+        var n = Math.random() * (end - start + 1) + start
+        return Math.floor(n)
     }
 }
 
