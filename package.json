@@ -9,6 +9,6 @@
     "nodemon": "^2.0.2"
   },
   "scripts": {
-    "test": "nodemon sort/insert-sort.js"
+    "test": "nodemon sort/bin-add.js"
   }
 }

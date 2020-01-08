@@ -42,18 +42,7 @@ const linear_find = (A, v) => {
     return r
 }
 
-//
-const bin_add = (a, b) => {
-    const n = a.length
-    const dec_a = parseInt(a.map(n => String(n)).join(''), 2)
-    const dec_b = parseInt(b.map(n => String(n)).join(''), 2)
-    // log('debug dec_a', dec_a, dec_b)
-    const sum = dec_b + dec_a
-    // log('debug n', n)
-    let t = dec_2_bin_string(sum, n +1)
-    return t
-    // return r
-}
+
 // 升序版本插入排序
 const insert_sort_asce = (arr) => {
     for(let i = 1; i < arr.length; i++) {
@@ -85,7 +74,7 @@ const test_insert_sort_asce = () => {
 
 const test_linear_find = () => {
     const arr = random_arr()
-    const index = random_between(0, arr.length -1)
+    const index = random_between(0, arr.length - 1)
     const t = arr[index]
     const result1 = linear_find(arr, t)
     assert_equal_arr(result1, index)
@@ -94,33 +83,11 @@ const test_linear_find = () => {
     assert_equal_arr(result2, null)
 }
 
-const dec_2_bin_string = (n, len) => {
-    let s = n.toString(2)
-    if(len) {
-        s = s.padStart(len, '0')
-    }
-    return s
-}
 
-const test_bin_add = () => {
-    const a = 130
-    const b = 1
-    // dec_2_bin_string(a)
-    // dec_2_bin_string(b)
-    let bin_a_string = dec_2_bin_string(a)
-    let bin_b_string = dec_2_bin_string(b)
-    const n = Math.max(bin_b_string.length, bin_a_string.length)
-    const a_arr = dec_2_bin_string(a, n).split('').map(n => +n)
-    const b_arr = dec_2_bin_string(b, n).split('').map(n => +n)
-    const result = bin_add(a_arr, b_arr)
-    assert_equal_arr(result.length, n + 1)
-
-}
 
 
 if(require.main === module) {
-    // test_insert_sort()
-    // test_insert_sort_asce()
+    test_insert_sort()
+    test_insert_sort_asce()
     test_linear_find()
-    // test_bin_add()
 }
